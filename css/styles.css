@@ -346,16 +346,16 @@ body {
     border-top: solid 3px #f8c51c;
     display: inline-block; }
   .section2 .section2__images {
-    width: 942px;
     margin-right: auto;
     margin-left: auto;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     position: relative;
-    top: -80px; }
+    top: -80px;
+    width: 80%; }
     .section2 .section2__images .section2__img {
-      display: inline-block; }
+      text-align: center; }
     .section2 .section2__images .section2__subtitle {
       font-family: HelveticaNeue-CondensedBlack;
       font-size: 20px;
@@ -443,7 +443,7 @@ body {
       border: 1px solid #dbdbdb; }
 
 .container {
-  width: 1180px;
+  width: 1170px;
   padding-left: 25px;
   padding-right: 25px;
   margin-left: auto;

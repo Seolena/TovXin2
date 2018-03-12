@@ -518,7 +518,6 @@ body {
   }
 
   .section2__images {
-    width: 942px;
     margin-right: auto;
     margin-left: auto;
     display: flex;
@@ -526,9 +525,10 @@ body {
     justify-content: space-between;
     position: relative;
     top: -80px;
+    width: 80%;
 
     .section2__img {
-      display: inline-block;
+      text-align: center;
     }
     
     .section2__subtitle {
@@ -672,7 +672,7 @@ body {
 }
 
 .container {
-  width: 1180px;
+  width: 1170px;
   padding-left: 25px; 
   padding-right: 25px;
   margin-left: auto;
@@ -702,6 +702,10 @@ body {
 // надо - ширину формы и высоту, почему нельзя высоту на 100%?
 // надо кнопку посередине сделать
 // флик лок или вроде того, счётчик
+// сделать анимацией кнопку плавного перехода при нажатии на стрелочку
+// сделать нажатие не только на стрелку, но и на флажок - переключение языка
+// посмотреть, что с шириной блоков, в частности формы
+// почитать о центрировании элементов, текста
 
 
 
