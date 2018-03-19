@@ -8,8 +8,12 @@
 		<link rel="stylesheet" href="css/normalize.css">
 		<link rel="stylesheet" href="css/styles.css">
 		<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
-
 		
+
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+		<link rel="stylesheet" href="css/flipclock.css">
+	   <script src="js/flipclock.min.js"></script>
+
 </head>
 <body>
 	<section class="intro">
@@ -51,21 +55,22 @@
 						<p class="inner__text"><span>биржа криптовалют</span><br>открытие:</p>
 						
 						<div class="tablo">
+							<div class="clock"></div>
 							<div class="tablo-item">
-								<div class="tablo-item__zeros"><p>0</p><p>0</p></div>
+								<!-- <div class="tablo-item__zeros"><p>0</p><p>0</p></div> -->
 								<div class="tablo__days">Дней</div>
 							</div>
 							<div class="tablo-item">
-								<div class="tablo-item__zeros"><p>0</p><p>0</p></div>
-								<div class="tablo__days">Дней</div>
+								<!-- <div class="tablo-item__zeros"><p>0</p><p>0</p></div> -->
+								<div class="tablo__days">&nbsp Недель</div>
 							</div>
 							<div class="tablo-item">
-								<div class="tablo-item__zeros"><p>0</p><p>0</p></div>
-								<div class="tablo__days">Дней</div>
+								<!-- <div class="tablo-item__zeros"><p>0</p><p>0</p></div> -->
+								<div class="tablo__days">Минут</div>
 							</div>
 							<div class="tablo-item">
-								<div class="tablo-item__zeros"><p>0</p><p>0</p></div>
-								<div class="tablo__days">Дней</div>
+								<!-- <div class="tablo-item__zeros"><p>0</p><p>0</p></div> -->
+								<div class="tablo__days">Секунд</div>
 							</div>
 						</div>
 						
@@ -78,7 +83,7 @@
 	     				<div class="btn btn--transparent btn--second">Сообщить об открытии</div>
 				</div>
 				
-				<div action="" class="form">
+				<form action="" class="form">
 						<div class="form-header"><p class="form-header__text1">ЗАРЕГИСТРИРУЙСЯ  СЕЙЧАС</p>
 						<br><p class="form-header__text2">И УЧАСТВУЙ В РОЗЫГРЫШЕ</p>
 						</div>
@@ -101,9 +106,9 @@
 				 	
 							 </div>
 
-							<div class="div-for-centering-btn"><button class="btn btn--black-text">Зарегистрироваться</button> </div>
+							<div class="div-for-centering-btn"><input type="submit" class="btn btn--black-text" value="Зарегистрироваться"></div>
 						</div>
-				</div>
+				</form>
 
 			 </div>
 			<div class="round-arrow-down"><a href=""><img src="img/down.png" alt=""></a></div>
@@ -111,7 +116,7 @@
 	</section>
 	<section class="section section2">
 	  	
-		<h1 class="section2__title">Как это работает?</h1>
+		<h1 class="section__title section2__title">Как это работает?</h1>
 		<div class="section2__line"></div>
 		<div class="container">
 			<div class="section2__images">
@@ -135,23 +140,110 @@
 	<section class="section section3">
 		<div class="container">
 			<div class="section3__wrap">
-				<div class="section3__inner-text">
+				<div class="section3__inner">
 					<p class="section3__title">Никаких лимитов снятия и плата составляет всего <span> 0,1% </span> </p>
-					<p class="section3__subtitle">Нам удалось снизить наши сборы за счет существующих финансовых резервов. Все внутренние сделки будут стоить от 0,1%. Это не одноразовое предложение, мы будем держать одни и те же сборы не менее 10 лет.</p>
+					<p class="section__inner-text section3__inner-text">Нам удалось снизить наши сборы за счет существующих финансовых резервов. Все внутренние сделки будут стоить от 0,1%. Это не одноразовое предложение, мы будем держать одни и те же сборы не менее 10 лет.</p>
 				</div>
 				<div class="section3__img">
 					<a href="" class="section3__img-link"> <img src="img/save-money.svg" alt=""></a> 
 				</div>
+				<div class="section3__background-text">0,1%</div>
 			</div>
 
 		</div>
 	</section>
 
 	<section class="section section4">
-		<div class="proba">
+		<!-- <div class="proba">
 			<button>gfgdfg</button>
 		</div>
+ -->
+		<div class="container section4__container">
+			<div class="section4__div-for-img">
+				<img src="img/apple.jpg" alt="">
+			</div>
+			<div class="section4__text">
+				<h2 class="section4__title">TOVXIN</h2>
+				<p class="section__inner-text section4__inner-text">Mauris non tempor quam, et lacinia sapien. Mauris accumsan eros eget libero posuere vulputate. Etiam elit elit, elementum sed varius at, adipiscing vitae est. Sed nec felis pellentesque, lacinia dui sed, ultricies sapien. Pellentesque orci lectus, consectetur vel posuere posuere, rutrum eu ipsum. 
+Aliquam eget odio sed ligula iaculis consequat at eget orci. Mauris molestie sit amet metus mattis varius.  </p>
+				<button class="btn btn--on-white">Зарегистрироваться</button>
+			</div>
+		</div>
+
 	</section>
+
+<section class="section5">
+	<div class="container">
+		<div class="section5__inner">
+			<div class="section5__img">
+				<img src="img/calendar-with-a-clock-time-tools.png" alt="">
+			</div>
+			<p class="section5__title">Мы работем - 365 дней в году, 24 часа в сутки</p>
+			<p class="section__inner-text section5__inner-text">Вам не придется ждать недели или месяцы, чтобы получить ответ от поддержки клиентов. Обслуживание наших клиентов работает 24/7/365. Следующие профессионалы здесь для вас:</p>
+			<div class="section5__line"></div>
+		</div>
+	</div>
+</section>
+
+<section class="section6">
+	<div class="container">
+		<p class="section__title section6__title">Вот те преимущества,<br>
+		о которых мы не можем молчать
+		</p>
+		<div class="section6__items">
+			<div class="section6__item">
+				<div class="item6__img">
+					<img src="img/img-for-section6/discount.png" alt="">
+				</div>
+				<div class="item6__title">Бонусы для первых пользователей</div>
+				<div class="item6__subtitle">Первые пользователи биржи получат финансовые вознаграждения за ранние регистрации</div>
+			</div>
+			<div class="item6__vertical-line"></div>
+			<div class="section6__item">
+				<div class="item6__img">
+					<img src="img/img-for-section6/security.png" alt="">
+				</div>
+				<div class="item6__title">Конфиденциальность</div>
+				<div class="item6__subtitle">Вся информация закрыта и не может быть открыта ни одному государственному органу</div>
+			</div>
+			<div class="item6__vertical-line"></div>
+			<div class="section6__item">
+				<div class="item6__img">
+					<img src="img/img-for-section6/world.png" alt="">
+				</div>
+				<div class="item6__title">Трейдеры со всего мира</div>
+				<div class="item6__subtitle">Трейдеры из 170 стран заинтересованы в сотрудничестве с нами</div>
+			</div>
+			<div class="item6__vertical-line"></div>
+			<div class="section6__item">
+				<div class="item6__img">
+					<img src="img/img-for-section6/gauge.png" alt="">
+				</div>
+				<div class="item6__title">Высокая рабочая скорость</div>
+				<div class="item6__subtitle">Наш обмен может обрабатывать до 5 млн транзакций в секунду и до 500 000 запросов клиентов одновременно</div>
+			</div>
+			<div class="item6__vertical-line"></div>
+			<div class="section6__item">
+				<div class="item6__img">
+					<img src="img/img-for-section6/graph.png" alt="">
+				</div>
+				<div class="item6__title">Четкие и понятные графики
+				</div>
+				<div class="item6__subtitle">Высококачественные графики для анализа позволяют эффективно определять тенденции и показатели</div>
+			</div>
+			<div class="item6__vertical-line"></div>
+			<div class="section6__item">
+				<div class="item6__img">
+					<img src="img/img-for-section6/okey.png" alt="">
+				</div>
+				<div class="item6__title">Удобный интерфейс</div>
+				<div class="item6__subtitle">Мы создали четкий и удобный интерфейс, которым каждый пользователь будет пользоваться</div>
+			</div>
+			<div class="item6__vertical-line"></div>
+		</div>
+
+	</div>
+</section>
 						
 <!-- <svg ><use xlink:href="#small-arrow"></use> </svg>  -->
 
@@ -193,7 +285,7 @@
 </svg>
 	
 
-
+<svg src="img/save-money.svg"> <use src="img/save-money.svg"> </use></svg>
 
 	<!--  <div class="round-arrow"><a href="" class=""><svg width="133px" height="133px"><use xlink:href="#round-arrow-down"></use> </svg></a></div> -->
 <!-- 
@@ -222,11 +314,38 @@
 
 
 
-	<script
+
+	
+ 
+<!-- 	<script
   src="http://code.jquery.com/jquery-3.3.1.js"
   integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-  crossorigin="anonymous"></script>
+  crossorigin="anonymous"></script>  -->
 	<script src="js/jq-scripts.js"></script>
+	
+
+	<script type="text/javascript">
+        var clock;
+         
+        $(document).ready(function() {
+            var clock;
+ 
+            clock = $('.clock').FlipClock({
+                clockFace: 'DailyCounter',
+                autoStart: false,
+                callbacks: {
+                    stop: function() {
+                        $('.message').html('The clock has stopped!')
+                    }
+                }
+            });
+                     
+            clock.setTime(101000);
+            clock.setCountdown(true);
+            clock.start();
+ 
+        });
+    </script>
 
 </body>
 <html/>

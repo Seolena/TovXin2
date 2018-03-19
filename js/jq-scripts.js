@@ -15,7 +15,7 @@ var lang_bottom_opasity = $('.lang-bottom-opasity');
 
 arrow.on('click', function(e) {
 	e.preventDefault();
-	bottom.toggle('hidden');
+	bottom.toggle('notvisible');
 	
 
 })
@@ -44,9 +44,11 @@ lang4.on('click', function(e) {
 
 lang1.on('click', function(e) {
 	e.preventDefault();
+	bottom.toggle('notvisible');
 })
 
 lang2.on('click', function(e) {
 	e.preventDefault();
+	bottom.toggle('notvisible');
 })
 
