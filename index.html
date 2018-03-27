@@ -7,12 +7,25 @@
 		<title>TovXinNew</title>
 		<link rel="stylesheet" href="css/normalize.css">
 		<link rel="stylesheet" href="css/styles.css">
-		<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+		<!-- <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet"> -->
 		
 
-		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+		<!-- <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script> -->
+		<script
+          src="http://code.jquery.com/jquery-3.3.1.js"
+          integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+          crossorigin="anonymous">
+        </script> 
+		<!-- эту часть можно закоментить, чтобы работали флажки -->
+       	<script type="text/javascript" src="fancybox/jquery.min.js"></script>
+
 		<link rel="stylesheet" href="css/flipclock.css">
 	   <script src="js/flipclock.min.js"></script>
+	   <script src="js/jq-scripts.js"></script>
+
+	   <link rel="stylesheet" type="text/css" media="all" href="fancybox/jquery.fancybox.css">
+	   <script type="text/javascript" src="fancybox/jquery.fancybox.js"></script>
+
 
 </head>
 <body>
@@ -36,7 +49,16 @@
 					<div class="lang-top">
 						<a href="" class="lang1"><img src="img/group-2.png" alt=""></a> 
 						<a href="" class="lang2 notvisible"><img src="img/russia-2.png" alt=""></a>
-						<div class="arrow-lang"><a href="" class="arrow-link"><svg width="12px" height="12px"><use xlink:href="#small-arrow"></use> </svg></a> </div> <br>
+						<div class="arrow-lang">
+							<a href="" class="arrow-link">
+							  	<svg  id="small-arrow" class="small-arrow-svg"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 129 129" enable-background="new 0 0 129 129" width="10px" height="10px">
+    								<g>
+       									<path d="m121.3,34.6c-1.6-1.6-4.2-1.6-5.8,0l-51,51.1-51.1-51.1c-1.6-1.6-4.2-1.6-5.8,0-1.6,1.6-1.6,4.2 0,5.8l53.9,53.9c0.8,0.8 1.8,1.2 2.9,1.2 1,0 2.1-0.4 2.9-1.2l53.9-53.9c1.7-1.6 1.7-4.2 0.1-5.8z" fill="#f8c51c"/>
+     								</g>    
+								</svg>
+							  
+						    </a> 
+						</div> <br>
 					</div>
 					
 					<div class="lang-bottom-opasity">
@@ -56,21 +78,19 @@
 						
 						<div class="tablo">
 							<div class="clock"></div>
-							<div class="tablo-item">
-								<!-- <div class="tablo-item__zeros"><p>0</p><p>0</p></div> -->
-								<div class="tablo__days">Дней</div>
-							</div>
-							<div class="tablo-item">
-								<!-- <div class="tablo-item__zeros"><p>0</p><p>0</p></div> -->
-								<div class="tablo__days">&nbsp Недель</div>
-							</div>
-							<div class="tablo-item">
-								<!-- <div class="tablo-item__zeros"><p>0</p><p>0</p></div> -->
-								<div class="tablo__days">Минут</div>
-							</div>
-							<div class="tablo-item">
-								<!-- <div class="tablo-item__zeros"><p>0</p><p>0</p></div> -->
-								<div class="tablo__days">Секунд</div>
+							<div class="tablo-items">
+								<div class="tablo-item tablo-item--first">
+									<div class="tablo__days">Дней</div>
+								</div>
+								<div class="tablo-item">
+									<div class="tablo__days"> Часов</div>
+								</div>
+								<div class="tablo-item">
+									<div class="tablo__days">Минут</div>
+								</div>
+								<div class="tablo-item">
+									<div class="tablo__days"> Секунд</div>
+								</div>
 							</div>
 						</div>
 						
@@ -79,11 +99,11 @@
 						
 						                <p class="inner__text3">приятные бонусы</p>
 						
-						<div class="btn">Зарегистрироваться</div>
-	     				<div class="btn btn--transparent btn--second">Сообщить об открытии</div>
+						<a class="btn modalbox " href="#feedback" rel="nofollow">Зарегистрироваться</a>
+	     				<a class="btn btn--transparent btn--second modalbox" href="#about-open" rel="nofollow">Сообщить об открытии</a>
 				</div>
 				
-				<form action="" class="form">
+				<form class="form">
 						<div class="form-header"><p class="form-header__text1">ЗАРЕГИСТРИРУЙСЯ  СЕЙЧАС</p>
 						<br><p class="form-header__text2">И УЧАСТВУЙ В РОЗЫГРЫШЕ</p>
 						</div>
@@ -111,7 +131,7 @@
 				</form>
 
 			 </div>
-			<div class="round-arrow-down"><a href=""><img src="img/down.png" alt=""></a></div>
+			<div class="round-arrow-down"><a class="scroll" href="#scroll-down"><img src="img/down.png" alt=""></a></div>
 	    </div>
 	</section>
 	<section class="section section2">
@@ -125,11 +145,11 @@
 							<p class="section2__subtitle">Зарегистрируйся</p>
 				</div>
 				<div class="section2__img">
-							<img src="img/big-money.png" alt="">
+							<img src="img/money.png" alt="">
 							<p class="section2__subtitle">Торгуй</p>
 				</div>
 				<div class="section2__img">
-							<img src="img/money.png" alt="">
+							<img src="img/big-money.png" alt="">
 							<p class="section2__subtitle">Получай прибыль</p>
 				</div>
 			</div>
@@ -137,7 +157,7 @@
 	 	
 	</section>
 
-	<section class="section section3">
+	<section class="section section3" id="scroll-down">
 		<div class="container">
 			<div class="section3__wrap">
 				<div class="section3__inner">
@@ -145,7 +165,7 @@
 					<p class="section__inner-text section3__inner-text">Нам удалось снизить наши сборы за счет существующих финансовых резервов. Все внутренние сделки будут стоить от 0,1%. Это не одноразовое предложение, мы будем держать одни и те же сборы не менее 10 лет.</p>
 				</div>
 				<div class="section3__img">
-					<a href="" class="section3__img-link"> <img src="img/save-money.svg" alt=""></a> 
+					 <img src="img/save-money.svg" alt="">
 				</div>
 				<div class="section3__background-text">0,1%</div>
 			</div>
@@ -154,10 +174,7 @@
 	</section>
 
 	<section class="section section4">
-		<!-- <div class="proba">
-			<button>gfgdfg</button>
-		</div>
- -->
+	
 		<div class="container section4__container">
 			<div class="section4__div-for-img">
 				<img src="img/apple.jpg" alt="">
@@ -166,7 +183,7 @@
 				<h2 class="section4__title">TOVXIN</h2>
 				<p class="section__inner-text section4__inner-text">Mauris non tempor quam, et lacinia sapien. Mauris accumsan eros eget libero posuere vulputate. Etiam elit elit, elementum sed varius at, adipiscing vitae est. Sed nec felis pellentesque, lacinia dui sed, ultricies sapien. Pellentesque orci lectus, consectetur vel posuere posuere, rutrum eu ipsum. 
 Aliquam eget odio sed ligula iaculis consequat at eget orci. Mauris molestie sit amet metus mattis varius.  </p>
-				<button class="btn btn--on-white">Зарегистрироваться</button>
+				<a class="btn btn--on-white modalbox" href="#feedback" rel="nofollow" >Зарегистрироваться</a>
 			</div>
 		</div>
 
@@ -187,75 +204,194 @@ Aliquam eget odio sed ligula iaculis consequat at eget orci. Mauris molestie sit
 
 <section class="section6">
 	<div class="container">
-		<p class="section__title section6__title">Вот те преимущества,<br>
+		<div class="section__title section6__title">Вот те преимущества,<br>
 		о которых мы не можем молчать
-		</p>
+		</div>
 		<div class="section6__items">
-			<div class="section6__item">
-				<div class="item6__img">
-					<img src="img/img-for-section6/discount.png" alt="">
+			<div class="section6__item--outer">
+				<div class="section6__item--inner">
+					<div class="item6__img">
+						<img src="img/img-for-section6/discount.png" alt="">
+					</div>
+					<div class="item6__title">Бонусы для первых пользователей</div>
+					<div class="item6__subtitle">Первые пользователи биржи получат финансовые вознаграждения за ранние регистрации</div>
 				</div>
-				<div class="item6__title">Бонусы для первых пользователей</div>
-				<div class="item6__subtitle">Первые пользователи биржи получат финансовые вознаграждения за ранние регистрации</div>
 			</div>
-			<div class="item6__vertical-line"></div>
-			<div class="section6__item">
-				<div class="item6__img">
-					<img src="img/img-for-section6/security.png" alt="">
+			
+			<div class="section6__item--outer">
+				<div class="section6__item--inner">
+					<div class="item6__img">
+						<img src="img/img-for-section6/security.png" alt="">
+					</div>
+					<div class="item6__title">Конфиденциальность</div>
+					<div class="item6__subtitle">Вся информация закрыта и не может быть открыта ни одному государственному органу</div>
 				</div>
-				<div class="item6__title">Конфиденциальность</div>
-				<div class="item6__subtitle">Вся информация закрыта и не может быть открыта ни одному государственному органу</div>
 			</div>
-			<div class="item6__vertical-line"></div>
-			<div class="section6__item">
-				<div class="item6__img">
-					<img src="img/img-for-section6/world.png" alt="">
+			
+			<div class="div section6__item--outer">
+				<div class="section6__item--inner">
+					<div class="item6__img">
+						<img src="img/img-for-section6/world.png" alt="">
+					</div>
+					<div class="item6__title">Трейдеры со всего мира</div>
+					<div class="item6__subtitle">Трейдеры из 170 стран заинтересованы в сотрудничестве с нами</div>
 				</div>
-				<div class="item6__title">Трейдеры со всего мира</div>
-				<div class="item6__subtitle">Трейдеры из 170 стран заинтересованы в сотрудничестве с нами</div>
 			</div>
-			<div class="item6__vertical-line"></div>
-			<div class="section6__item">
-				<div class="item6__img">
-					<img src="img/img-for-section6/gauge.png" alt="">
+			
+			<div class="section6__item--outer">
+				<div class="section6__item--inner">
+					<div class="item6__img">
+						<img src="img/img-for-section6/gauge.png" alt="">
+					</div>
+					<div class="item6__title">Высокая рабочая скорость</div>
+					<div class="item6__subtitle">Наш обмен может обрабатывать до 5 млн транзакций в секунду и до 500 000 запросов клиентов одновременно</div>
 				</div>
-				<div class="item6__title">Высокая рабочая скорость</div>
-				<div class="item6__subtitle">Наш обмен может обрабатывать до 5 млн транзакций в секунду и до 500 000 запросов клиентов одновременно</div>
 			</div>
-			<div class="item6__vertical-line"></div>
-			<div class="section6__item">
-				<div class="item6__img">
-					<img src="img/img-for-section6/graph.png" alt="">
+			
+			<div class="section6__item--outer">
+				<div class="section6__item--inner">
+					<div class="item6__img">
+						<img src="img/img-for-section6/graph.png" alt="">
+					</div>
+					<div class="item6__title">Четкие и понятные графики
+					</div>
+					<div class="item6__subtitle">Высококачественные графики для анализа позволяют эффективно определять тенденции и показатели</div>
 				</div>
-				<div class="item6__title">Четкие и понятные графики
-				</div>
-				<div class="item6__subtitle">Высококачественные графики для анализа позволяют эффективно определять тенденции и показатели</div>
 			</div>
-			<div class="item6__vertical-line"></div>
-			<div class="section6__item">
-				<div class="item6__img">
-					<img src="img/img-for-section6/okey.png" alt="">
+			
+			<div class="section6__item--outer">
+				<div class="section6__item--inner">
+					<div class="item6__img">
+						<img src="img/img-for-section6/okey.png" alt="">
+					</div>
+					<div class="item6__title">Удобный интерфейс</div>
+					<div class="item6__subtitle">Мы создали четкий и удобный интерфейс, которым каждый пользователь будет пользоваться</div>
 				</div>
-				<div class="item6__title">Удобный интерфейс</div>
-				<div class="item6__subtitle">Мы создали четкий и удобный интерфейс, которым каждый пользователь будет пользоваться</div>
 			</div>
-			<div class="item6__vertical-line"></div>
+			
 		</div>
 
 	</div>
 </section>
-						
-<!-- <svg ><use xlink:href="#small-arrow"></use> </svg>  -->
 
-
-<svg id="small-arrow" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 129 129" enable-background="new 0 0 129 129" width="10px" height="10px">
+<section class="section section7">
+	<div class="container">
+		<div class="section__title section7__title">Место №1 для трейдеров:
+		</div>
+		<p class="section7__subtitle">Прогрессивная технология, минимальная плата, вознаграждение для ранних пользователей - все это стоит регистрации. Нулевой риск, и вы получаете торговую платформу, которая подходит для ваших сделок.</p>
+		<button class="btn btn--black-text modalbox" href="#feedback" rel="nofollow">
+		Зарегистрироваться
+		</button>
+	</div>
 	
-      <g>
-        <path d="m121.3,34.6c-1.6-1.6-4.2-1.6-5.8,0l-51,51.1-51.1-51.1c-1.6-1.6-4.2-1.6-5.8,0-1.6,1.6-1.6,4.2 0,5.8l53.9,53.9c0.8,0.8 1.8,1.2 2.9,1.2 1,0 2.1-0.4 2.9-1.2l53.9-53.9c1.7-1.6 1.7-4.2 0.1-5.8z" fill="#f8c51c"/>
-      </g>
-    
-</svg>
-					
+</section>
+
+<footer class="footer">
+	<div class="footer__text">все права защищены - 2018</div>
+</footer>
+
+
+<div action="" class="form form--modal" id="feedback">
+						<div class="form-header"><p class="form-header__text1">ЗАРЕГИСТРИРУЙСЯ  СЕЙЧАС</p>
+						<br><p class="form-header__text2">И УЧАСТВУЙ В РОЗЫГРЫШЕ</p>
+						</div>
+						<div class="form-main">
+							<div class="form__bonus"></div>
+							
+							<input type="	" class="input" placeholder="Email">
+							<input type="	" class="input" placeholder="Телефон">
+							 <div class="wrap-checkbox">
+							 
+							 	<input type="checkbox" class="input" id="form-main__checkbox">
+							 	
+							 	<div class="check-img">
+									<div class="check-img-checked"></div>
+									<div class="check-img-notchecked"></div>
+								</div>
+								<label class="label" for="form-main__checkbox">
+							 		Согласие на сбор и обработку личных данных 
+							 	</label> 	
+				 	
+							 </div>
+
+							<div class="div-for-centering-btn"><input type="submit" class="btn btn--black-text" value="Зарегистрироваться" href="#modal--thank"></div>
+						</div>
+</div>
+
+
+
+<div action="" class="form form--modal" id="about-open">
+						<div class="form-header"><p class="form-header__text1">Совсем скоро открытие!</p>
+						<br><p class="form-header__text2">Не пропустите - заполните данные</p>
+						</div>
+						<div class="form-main">
+							<div class="form__bonus"></div>
+							
+							<input type="	" class="input" placeholder="Email">
+							<input type="	" class="input" placeholder="Телефон">
+							 <div class="wrap-checkbox">
+							 
+							 	<input type="checkbox" class="input" id="form-main__checkbox">
+							 	
+							 	<div class="check-img">
+									<div class="check-img-checked"></div>
+									<div class="check-img-notchecked"></div>
+								</div>
+								<label class="label" for="form-main__checkbox">
+							 		Согласие на сбор и обработку личных данных 
+							 	</label> 	
+				 	
+							 </div>
+
+							<div class="div-for-centering-btn"><input type="submit" class="btn btn--black-text" value="ДАЙТЕ ЗНАТЬ" href="#modal--thank-for-open"></div>
+						</div>
+</div>
+
+
+<div action="" class="form form--modal modalbox modal--thank" id="modal--thank">
+	<div class="form-header">
+		<p class="form-header__text1">СПАСИБО!</p>
+		<br><p class="form-header__text2">Подробности акции будут отправлены
+вам на почту!</p>
+		<p class="form-header__text2">Совсем скоро вы сможете начать зарабатывать на нашей бирже!</p>
+		<div class="div-for-centering-btn"><input type="submit" class="btn btn--black-text" value="Закрыть"></div>
+	</div>
+									
+</div>
+
+<div action="" class="form form--modal modalbox modal--thank-for-open" id="modal--thank-for-open">
+	<div class="form-header">
+		<p class="form-header__text1">СПАСИБО!</p>
+		<br><p class="form-header__text2">Как только наша биржа заработает, вы получите уведомление!</p>
+		<p class="form-header__text2">До встречи на бирже!</p>
+		<div class="div-for-centering-btn"><input type="submit" class="btn btn--black-text" value="Закрыть"></div>
+	</div>
+									
+</div>
+
+
+
+
+
+<!-- <div id="feedback"> 
+  <h2>Отправка сообщения</h2>
+    <form id="f_contact" name="contact" action="#" method="post">
+        <label for="f_name">Ваше имя</label><br>
+        <input type="text" id="f_name" name="f_name"><br>
+        <label for="f_email">Ваш E-mail</label><br>
+        <input type="text" id="f_email" name="f_email"><br>
+        <label for="f_msg">Введите сообщение</label><br>
+        <textarea id="f_msg" name="f_msg" class="txtarea"></textarea>
+        <button id="f_send">Отправить E-mail</button>
+    </form> 
+</div>  -->
+		
+
+
+<!-- <svg ><use xlink:href="#small-arrow"></use> </svg> 
+ -->
+
+		
 	
 
 <svg style="display: none;"  width="149px" height="34px" viewBox="0 0 149 34" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -285,42 +421,17 @@ Aliquam eget odio sed ligula iaculis consequat at eget orci. Mauris molestie sit
 </svg>
 	
 
-<svg src="img/save-money.svg"> <use src="img/save-money.svg"> </use></svg>
+<svg style="display: none;" src="img/save-money.svg"> <use src="img/save-money.svg"> </use></svg>
 
 	<!--  <div class="round-arrow"><a href="" class=""><svg width="133px" height="133px"><use xlink:href="#round-arrow-down"></use> </svg></a></div> -->
-<!-- 
-<svg width="133px" height="133px" ">
-  
-    <defs>
-        <rect id="b" width="89" height="89" rx="44.5"/>
-        <filter id="a" width="187.6%" height="187.6%" x="-43.8%" y="-30.3%" filterUnits="objectBoundingBox">
-            <feOffset dy="12" in="SourceAlpha" result="shadowOffsetOuter1"/>
-            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="11"/>
-            <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.24 0"/>
-        </filter>
-    </defs>
-      <symbol id="round-arrow-down">
-      <g fill="none" fill-rule="evenodd">
-         <g transform="translate(22 10)">
-            <use fill="#000" filter="url(#a)" xlink:href="#b"/> 
-            <use fill="#fff" xlink:href="#b"/> 
-         </g>
-         <g stroke="#F0C323" stroke-linecap="square" stroke-width="5">
-            <path d="M47 49l19 19M85 49L66 68"/>
-         </g>
-      </g>
-   </symbol>
-</svg> -->
+
 
 
 
 
 	
  
-<!-- 	<script
-  src="http://code.jquery.com/jquery-3.3.1.js"
-  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-  crossorigin="anonymous"></script>  -->
+
 	<script src="js/jq-scripts.js"></script>
 	
 
@@ -347,11 +458,13 @@ Aliquam eget odio sed ligula iaculis consequat at eget orci. Mauris molestie sit
         });
     </script>
 
+    
+
 </body>
 <html/>
 
 
-<!-- style="display: none;"  -->
+<!-- style="display: none;" 
 <!-- <svg ><use xlink:href="#logo" ></use> </svg>  -->
 <!-- конструкцию выше использовать для свг, id задавать свгшке, которая ниже. 
  -->

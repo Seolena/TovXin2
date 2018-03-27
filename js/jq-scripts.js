@@ -52,3 +52,32 @@ lang2.on('click', function(e) {
 	bottom.toggle('notvisible');
 })
 
+
+$('a.scroll').bind("click", function(e){
+		e.preventDefault();
+		var anchor = $(this);
+		var href = anchor.attr('href');
+		var href_cutted = '#'+(anchor.attr('href').split('#'))[1];
+		//alert(href_cutted);
+		$('html, body').stop().animate({
+			scrollTop: $(href).offset().top
+		}, 300);
+		
+		
+	});
+
+
+
+$(document).ready(function(){
+    $(".modalbox").fancybox();
+    $("#f_contact").submit(function(){ return false; });
+    $("#f_send").on("click", function(){
+         
+        // тут дальнейшие действия по обработке формы
+        // закрываем окно, как правило делать это нужно после обработки данных
+        $("#f_contact").fadeOut("fast", function(){
+            $(this).before("<p><strong>Ваше сообщение отправлено!</strong></p>");
+            setTimeout("$.fancybox.close()", 1000);
+        });
+    });
+});
